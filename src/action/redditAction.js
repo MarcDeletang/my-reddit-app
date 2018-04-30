@@ -31,22 +31,35 @@ export const loadSubList = () => {
     })
         .then(response => response.json())
         .then(json => {
+          console.log(json);
           let subList = json.data.children.map(subItem => subItem.data.url);
           dispatch({type: 'ADD_SUBRLIST', data: subList});
     })
   }
 };
 
+class Post {
+  constructor(dataObj) {
+    this.title = dataObj.title;
+    this.url = dataObj.url;
+    this.created = dataObj.created;
+    this.authorName = dataObj.author;
+    this.upvote = dataObj.score;
+    this.thumbnail = dataObj.thumbnail;
+  }
+}
+
 export const getPost = (subTitle) => {
   return (dispatch) => {
-    let url = 'https://www.reddit.com' + subTitle + '/hot.json'
+    let url = 'https://www.reddit.com' + subTitle + 'hot.json'
     fetch(url, {
       method: 'GET'
     })
     .then(response => response.json())
     .then(json => {
-      console.log(json);
-      return {type: 'TOTO'}
+      //console.log(json);
+      let postArray = json.data.children.map(post => new Post(post.data));
+      dispatch({type: 'UPDATE_POST', data: postArray});
     })
   }
 };

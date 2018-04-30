@@ -16,6 +16,10 @@ const RootReducer = (state = initialValue, action) => {
         subRList: action.data,
         selectedSub: action.data[0]
       });
+    case 'UPDATE_POST':
+      return Object.assign({}, state, {
+        posts: action.data
+      });
     default:
       return state;
   }

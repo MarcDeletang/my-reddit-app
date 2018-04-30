@@ -1,0 +1,50 @@
+#mainContainer {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 15px;
+}
+
+#imgContainer {
+  width: 150px;
+  height: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+
+#imgContainer img {
+  max-width: 100%;
+  height: auto;
+}
+
+#titleContainer {
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#buttonContainer {
+  margin-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#buttonContainer button {
+  width: 100%;
+  background-color: #FF3F18;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  height: 60px;
+  border: none;
+  border-radius: 15px;
+}
+
+#buttonContainer button:hover {
+  cursor: pointer;
+}

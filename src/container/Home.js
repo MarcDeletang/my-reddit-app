@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import {getPost, loadSubList} from '../action/redditAction';
 import {connect} from 'react-redux';
+import '../css/Home.css';
+import SubListContainer from './SubListContainer';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     if (this.props.subRList === undefined && this.props.selectedSub === null) {
@@ -20,7 +19,17 @@ class Home extends Component {
   }
 
   render() {
-    return null;
+    return (
+        <div id="HomeContainer" className="container">
+            <div className="row">
+              <div id="divOne" className="col-4">
+                <SubListContainer/>
+              </div>
+              <div id="divTwo" className="col-8">
+              </div>
+            </div>
+        </div>
+    );
   }
 }
 

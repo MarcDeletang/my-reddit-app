@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import '../css/Login.css';
+import Logo from '../assets/logo.png';
+import {Redirect} from 'react-router-dom';
 
 class Login extends Component {
 
@@ -14,7 +17,22 @@ class Login extends Component {
 
   render() {
     return (
-        <button onClick={() => this.redditConnect()}>Reddit Connect</button>
+        <div id="mainContainer" className="container">
+          <Redirect to='/home' />
+          <div className="row">
+            <div className="col-12">
+              <div id="imgContainer">
+                <img src={Logo} alt="logo"/>
+              </div>
+            </div>
+            <div id="titleContainer" className="col-12">
+              <span>My Reddit App</span>
+            </div>
+            <div id="buttonContainer" className="col-12">
+              <button onClick={() => this.redditConnect()}>Reddit Connect</button>
+            </div>
+          </div>
+        </div>
     );
   }
 }
