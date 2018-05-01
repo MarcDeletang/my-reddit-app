@@ -1,8 +1,8 @@
-
 let initialValue = {
   accessToken: '',
   subRList: [],
   selectedSub: null,
+  posts: []
 };
 
 const RootReducer = (state = initialValue, action) => {
@@ -19,6 +19,10 @@ const RootReducer = (state = initialValue, action) => {
     case 'UPDATE_POST':
       return Object.assign({}, state, {
         posts: action.data
+      });
+    case 'SELECT_SUB':
+      return Object.assign({}, state, {
+        selectedSub: action.data
       });
     default:
       return state;

@@ -3,6 +3,7 @@ import {getPost, loadSubList} from '../action/redditAction';
 import {connect} from 'react-redux';
 import '../css/Home.css';
 import SubListContainer from './SubListContainer';
+import PostsContainer from './PostsContainer';
 
 class Home extends Component {
 
@@ -26,6 +27,7 @@ class Home extends Component {
                 <SubListContainer/>
               </div>
               <div id="divTwo" className="col-8">
+                <PostsContainer/>
               </div>
             </div>
         </div>

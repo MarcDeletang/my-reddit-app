@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../css/Login.css';
 import Logo from '../assets/logo.png';
-import {Redirect} from 'react-router-dom';
 
 class Login extends Component {
 
@@ -18,7 +17,6 @@ class Login extends Component {
   render() {
     return (
         <div id="mainContainer" className="container">
-          <Redirect to='/home' />
           <div className="row">
             <div className="col-12">
               <div id="imgContainer">

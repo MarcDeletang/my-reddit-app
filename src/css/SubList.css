@@ -1,0 +1,16 @@
+.sublist-ul {
+  list-style: none;
+  padding: unset;
+  margin: unset;
+  width: 100%;
+  overflow-y: scroll; }
+
+.sublist-ul li {
+  height: 30px;
+  line-height: 30px; }
+
+.sublist-ul li:hover {
+  cursor: pointer; }
+
+.selected {
+  color: blue; }

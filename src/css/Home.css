@@ -11,8 +11,11 @@
 
 #divOne {
   height: 100%;
-  background-color: red; }
+  background-color: white;
+  padding-top: 15px; }
 
 #divTwo {
   height: 100%;
-  background-color: blue; }
+  padding: unset;
+  background-color: white;
+  border-left: 1px solid grey; }

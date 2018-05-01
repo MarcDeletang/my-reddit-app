@@ -1,0 +1,62 @@
+.postslist-ul {
+  list-style: none;
+  padding: unset;
+  margin: unset;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.postslist-ul li {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px
+}
+
+.scoreContainer {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: green;
+  font-size: 12px;
+}
+
+.thumbnailContainer {
+  width: 50px;
+  height: 50px;
+}
+
+.thumbnailContainer img {
+  width: 50px;
+  height: 50px;
+}
+
+.infoContainer {
+  height: 50px;
+  width: calc(100% - 115px);
+  margin-left: 15px
+}
+
+.postTitle {
+  width: 100%;
+  height: 25px;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.postInfo {
+  width: 100%;
+  height: 25px;
+  font-size: 10px;
+  line-height: 25px;
+}
+
+

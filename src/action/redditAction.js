@@ -46,6 +46,9 @@ class Post {
     this.authorName = dataObj.author;
     this.upvote = dataObj.score;
     this.thumbnail = dataObj.thumbnail;
+    if (this.thumbnail === '') {
+      this.thumbnail = 'https://lh4.googleusercontent.com/-fj6pace2cv0/U9Jt75Kq8PI/AAAAAAAARtE/ttg-4YuCOfQ/s250/exe_empty_thumbnail.jpg';
+    }
   }
 }
 
@@ -64,6 +67,12 @@ export const getPost = (subTitle) => {
   }
 };
 
-// CK4802_CV5d3kw:adP2ajBVAGjVSLuD5_A2rvJt27
+export const selectSub = (subTitle) => {
+  return (dispatch) => {
+    dispatch({type: 'SELECT_SUB', data: subTitle});
+  }
+};
+
+// CK4802_CV5d3kw:adP2ajBVAGjVSLuD5_A2rvJt27 getPost(subTitle);
 
 // "45656352500-1bJoAlsEptaLL23_pqz5bmeySAM"
